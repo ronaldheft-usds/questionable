@@ -5,6 +5,8 @@
 
 import { IQuestion } from '@usds.gov/questionable-react-component';
 import {
+  YES,
+  NO,
   TQuestionMap,
 } from '../lib';
 
@@ -35,7 +37,18 @@ const HOME_B: Partial<IQuestion> = {
   title:    'Do you own or rent your home?',
 };
 
+/**
+ * Home: primary home
+ */
+const HOME_C: Partial<IQuestion> = {
+  answers:  [YES, NO],
+  id:       'HOME_C',
+  subTitle: 'This means it was the address for things like taxes, voter registration, and school district if you have children.',
+  title:    'Was the space your primary home when the event happened?',
+};
+
 export const questionContentMap: TQuestionMap = {
   A,
   HOME_B,
+  HOME_C,
 };

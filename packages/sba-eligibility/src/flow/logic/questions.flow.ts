@@ -6,6 +6,7 @@ import { merge }                             from 'lodash';
 import { QUESTION_TYPE, IQuestion, IBranch } from '@usds.gov/questionable-react-component';
 import {
   HOME,
+  YES,
 } from '../lib/constants';
 import { TQuestionMap } from '../lib/contentMap';
 
@@ -81,11 +82,37 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
   ) as IQuestion;
 
   /**
+   * Home: primary home
+   */
+  const HOME_C: IQuestion = merge(
+    {
+      branch:            HOME_BRANCH,
+      entryRequirements: [
+        {
+          explanation: 'Own home',
+          responses:   [
+            AFFECTED_HOME,
+            {
+              answers:  [YES],
+              question: HOME_B,
+            },
+          ],
+        },
+      ],
+      id:      'HOME_C',
+      section: { id: 'introduction' },
+      type:    QUESTION_TYPE.MULTIPLE_CHOICE,
+    },
+    json.HOME_C,
+  ) as IQuestion;
+
+  /**
    * Map of questions for use elsewhere
    */
   const questionMap = {
     A,
     HOME_B,
+    HOME_C,
   };
 
   /**
@@ -94,6 +121,7 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
   const questionList: IQuestion[] = [
     A,
     HOME_B,
+    HOME_C,
   ];
 
   // Note: the order should match the logical order
@@ -103,6 +131,7 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
     questions: [
       A,
       HOME_B,
+      HOME_C,
     ].map((q) => ({ id: q.id })),
   };
 

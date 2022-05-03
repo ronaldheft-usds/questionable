@@ -14,6 +14,16 @@ export const BUSINESS = { id: '1', order: 2, title: 'Business' };
 export const NON_PROFIT = { id: '2', order: 3, title: 'Non-profit' };
 
 /**
+ * Yes
+ */
+export const YES = { id: '0', order: 1, title: 'Yes' };
+
+/**
+ * No
+ */
+export const NO = { id: '1', order: 2, title: 'No' };
+
+/**
  * Disability (Child)
  */
 export const DISABILITY = { id: 'a1_disability' };
@@ -64,16 +74,6 @@ export const SIXTY_FIVE = {
   months: 0,
   years:  65,
 };
-
-/**
-  * Yes
-  */
-export const YES = { id: '0', order: 1, title: 'Yes' };
-
-/**
-  * No
-  */
-export const NO = { id: '1', order: 2, title: 'No' };
 
 /**
   * 18
