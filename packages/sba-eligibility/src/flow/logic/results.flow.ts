@@ -6,8 +6,7 @@
 import { merge }               from 'lodash';
 import { IResult }             from '@usds.gov/questionable-react-component';
 import {
-  BUSINESS,
-  NON_PROFIT,
+  YES,
   LEARN_HOW_TO_APPLY_ACTION,
 } from '../lib/constants';
 import { TQuestionMap, TResultMap } from '../lib/contentMap';
@@ -15,11 +14,12 @@ import { TQuestionMap, TResultMap } from '../lib/contentMap';
 // eslint-disable-next-line @typescript-eslint/no-explicit-any,@typescript-eslint/explicit-module-boundary-types
 export const buildResults = (json: TResultMap, questionMap: TQuestionMap) => {
   const {
-    A,
+    HOME_C,
+    HOME_E,
   } = questionMap;
 
   /**
-   * Retirement
+   * Home - primary residence
    */
   const r1: IResult = merge(
     {
@@ -27,10 +27,8 @@ export const buildResults = (json: TResultMap, questionMap: TQuestionMap) => {
       id:           'r1',
       requirements: [
         {
-          explanation:
-            "You've worked for ten years or more and meet the age qualification because you're 62 or older.",
           responses: [
-            { answers: [BUSINESS, NON_PROFIT], question: A },
+            { answers: [YES], question: HOME_C },
           ],
         },
       ],
@@ -39,14 +37,34 @@ export const buildResults = (json: TResultMap, questionMap: TQuestionMap) => {
   ) as IResult;
 
   /**
+   * Home - area offering support
+   */
+  const r2: IResult = merge(
+    {
+      action:       LEARN_HOW_TO_APPLY_ACTION,
+      id:           'r2',
+      requirements: [
+        {
+          responses: [
+            { answers: [YES], question: HOME_E },
+          ],
+        },
+      ],
+    },
+    json.r2,
+  ) as IResult;
+
+  /**
    * All possible results with their requirements
    */
   const resultList: IResult[] = [
     r1,
+    r2,
   ];
 
   const resultMap = {
     r1,
+    r2,
   };
 
   return {

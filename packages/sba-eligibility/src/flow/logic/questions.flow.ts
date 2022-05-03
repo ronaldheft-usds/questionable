@@ -8,6 +8,7 @@ import {
   HOME,
   OWN,
   RENT,
+  YES,
 } from '../lib/constants';
 import { TQuestionMap } from '../lib/contentMap';
 
@@ -101,6 +102,11 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
     json.HOME_C,
   ) as IQuestion;
 
+  const PRIMARY_RESIDENCE = {
+    answers:  [YES],
+    question: HOME_C,
+  };
+
   /**
    * Home: zip code
    */
@@ -110,7 +116,10 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
       entryRequirements: [
         {
           explanation: 'Disaster affected home',
-          responses:   [AFFECTED_HOME],
+          responses:   [
+            AFFECTED_HOME,
+            PRIMARY_RESIDENCE,
+          ],
         },
       ],
       id:      'HOME_D',
@@ -129,7 +138,10 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
       entryRequirements: [
         {
           explanation: 'Disaster affected home',
-          responses:   [AFFECTED_HOME],
+          responses:   [
+            AFFECTED_HOME,
+            PRIMARY_RESIDENCE,
+          ],
         },
       ],
       id:      'HOME_E',
@@ -150,6 +162,7 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
           explanation: 'Disaster affected home - own',
           responses:   [
             AFFECTED_HOME,
+            PRIMARY_RESIDENCE,
             {
               answers:  [OWN],
               question: HOME_B,
@@ -175,6 +188,7 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
           explanation: 'Disaster affected home - rent',
           responses:   [
             AFFECTED_HOME,
+            PRIMARY_RESIDENCE,
             {
               answers:  [RENT],
               question: HOME_B,
@@ -198,7 +212,10 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
       entryRequirements: [
         {
           explanation: 'Disaster affected home',
-          responses:   [AFFECTED_HOME],
+          responses:   [
+            AFFECTED_HOME,
+            PRIMARY_RESIDENCE,
+          ],
         },
       ],
       id:      'HOME_G',
@@ -217,7 +234,10 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
       entryRequirements: [
         {
           explanation: 'Disaster affected home',
-          responses:   [AFFECTED_HOME],
+          responses:   [
+            AFFECTED_HOME,
+            PRIMARY_RESIDENCE,
+          ],
         },
       ],
       id:      'HOME_H',
@@ -236,7 +256,10 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
       entryRequirements: [
         {
           explanation: 'Disaster affected home',
-          responses:   [AFFECTED_HOME],
+          responses:   [
+            AFFECTED_HOME,
+            PRIMARY_RESIDENCE,
+          ],
         },
       ],
       id:      'HOME_I',
@@ -255,7 +278,10 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
       entryRequirements: [
         {
           explanation: 'Disaster affected home',
-          responses:   [AFFECTED_HOME],
+          responses:   [
+            AFFECTED_HOME,
+            PRIMARY_RESIDENCE,
+          ],
         },
       ],
       id:      'HOME_J',
@@ -274,7 +300,10 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
       entryRequirements: [
         {
           explanation: 'Disaster affected home',
-          responses:   [AFFECTED_HOME],
+          responses:   [
+            AFFECTED_HOME,
+            PRIMARY_RESIDENCE,
+          ],
         },
       ],
       id:      'HOME_K',
