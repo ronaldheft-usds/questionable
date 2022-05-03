@@ -6,27 +6,20 @@ export const pageContent = {
     body:     '',
     id:       PAGE_TYPE.NO_RESULTS,
     subTitle: `
-Based on your answers, you may not be eligible for benefits right now. As you age and parts of your life change, you may become eligible.<br>
-<br>
-If you want to start an application anyway, <a href="/apply">learn how to apply.</a><br>
-<br>
-Call us if you have questions or think you may be eligible for benefits.<br>
-<br>
-Call <a href="tel:+1-800-772-1213">1-800-772-1213</a><br>
-Call <a href="tel:+1-800-325-0778">TTY 1-800-325-0778</a> if you're deaf or hard of hearing<br>
+    If you want to start an application anyway, <a>learn how to apply</a>.
 `,
-    title: 'You may not be eligible for Social Security benefits.',
+    title: 'You\'re not eligible for a loan.',
   },
   resultsPage: {
-    body: `This gives you an idea of what you may be eligible for, but we can't guarantee you'll get these benefits. We'll provide a definite answer after you complete the application process.<br>
-<br>
-The answers you shared today told us what's going on in your life right now. As you age and aspects of your life change, you may be eligible for other Social Security benefits.`,
+    body: `
+    This gives you an idea of what you may be eligible for, but we can't guarantee you'll get these benefits. We'll provide a definite answer after you complete the application process.
+    `,
     bodyHeader: '',
     id:         PAGE_TYPE.RESULTS,
     info:       '',
     subTitle:
-      "Based on your answers, here's what you may be eligible for and why:",
-    title: 'You may be eligible for Social Security benefits.',
+      "Based on what you told us, you meet the initial criteria for a loan. If you're comfortable borrowing money that you'll have to pay back, continue with the process and learn how to apply.",
+    title: 'You may be eligible for a loan.',
   },
   summaryPage: {
     buttons: {
