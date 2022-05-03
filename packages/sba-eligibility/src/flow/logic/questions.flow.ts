@@ -6,6 +6,8 @@ import { merge }                             from 'lodash';
 import { QUESTION_TYPE, IQuestion, IBranch } from '@usds.gov/questionable-react-component';
 import {
   HOME,
+  OWN,
+  RENT,
 } from '../lib/constants';
 import { TQuestionMap } from '../lib/contentMap';
 
@@ -145,8 +147,14 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
       branch:            HOME_BRANCH,
       entryRequirements: [
         {
-          explanation: 'Disaster affected home',
-          responses:   [AFFECTED_HOME],
+          explanation: 'Disaster affected home - own',
+          responses:   [
+            AFFECTED_HOME,
+            {
+              answers:  [OWN],
+              question: HOME_B,
+            },
+          ],
         },
       ],
       id:      'HOME_FA',
@@ -154,6 +162,31 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
       type:    QUESTION_TYPE.MULTIPLE_CHOICE,
     },
     json.HOME_FA,
+  ) as IQuestion;
+
+  /**
+   * Home: loan usage - own
+   */
+  const HOME_FB: IQuestion = merge(
+    {
+      branch:            HOME_BRANCH,
+      entryRequirements: [
+        {
+          explanation: 'Disaster affected home - rent',
+          responses:   [
+            AFFECTED_HOME,
+            {
+              answers:  [RENT],
+              question: HOME_B,
+            },
+          ],
+        },
+      ],
+      id:      'HOME_FB',
+      section: { id: 'introduction' },
+      type:    QUESTION_TYPE.MULTIPLE_CHOICE,
+    },
+    json.HOME_FB,
   ) as IQuestion;
 
   /**
@@ -261,6 +294,7 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
     HOME_D,
     HOME_E,
     HOME_FA,
+    HOME_FB,
     HOME_G,
     HOME_H,
     HOME_I,
@@ -278,6 +312,7 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
     HOME_D,
     HOME_E,
     HOME_FA,
+    HOME_FB,
     HOME_G,
     HOME_H,
     HOME_I,
@@ -296,6 +331,7 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
       HOME_D,
       HOME_E,
       HOME_FA,
+      HOME_FB,
       HOME_G,
       HOME_H,
       HOME_I,

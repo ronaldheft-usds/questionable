@@ -24,6 +24,16 @@ export const YES = { id: '0', order: 1, title: 'Yes' };
 export const NO = { id: '1', order: 2, title: 'No' };
 
 /**
+ * Yes
+ */
+export const OWN = { id: '0', order: 1, title: 'Own' };
+
+/**
+  * No
+  */
+export const RENT = { id: '1', order: 2, title: 'Rent' };
+
+/**
  * Disability (Child)
  */
 export const DISABILITY = { id: 'a1_disability' };
