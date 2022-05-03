@@ -43,6 +43,7 @@ export const AppContainer = (data: any = {}): JSX.Element => {
   }
   const gtag = window.gtag || noop;
   gtag('config', 'ssa_eligibility_wizard', {
+    // eslint-disable-next-line camelcase
     send_page_view: false,
   });
   const args = {
