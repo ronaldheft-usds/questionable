@@ -64,12 +64,33 @@ div.usa-step-indicator__header {
   padding: 10px 0px 10px 0px;
 }
 
+.usds-q-summary-list {
+  margin: 20px 0;
+}
+
+.usds-q-summary-list li {
+  margin: 6px 0;
+}
+
+.usds-q-summary-list li span[role="link"] {
+  display: block;
+}
+
+.usds-q-summary-list li span.text-bold {
+  display: block;
+  margin-left: 12px;
+}
+
 .usds-q-results-summary-box {
   text-align: left;
 }
 
 .usds-q-results-summary-header {
   padding-top: 20px !important;
+}
+
+.usds-q-results-body > div {
+  margin: 20px 0;
 }
 
 .usds-q-step-info {
