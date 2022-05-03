@@ -6,7 +6,6 @@ import { merge }                             from 'lodash';
 import { QUESTION_TYPE, IQuestion, IBranch } from '@usds.gov/questionable-react-component';
 import {
   HOME,
-  YES,
 } from '../lib/constants';
 import { TQuestionMap } from '../lib/contentMap';
 
@@ -89,14 +88,8 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
       branch:            HOME_BRANCH,
       entryRequirements: [
         {
-          explanation: 'Own home',
-          responses:   [
-            AFFECTED_HOME,
-            {
-              answers:  [YES],
-              question: HOME_B,
-            },
-          ],
+          explanation: 'Disaster affected home',
+          responses:   [AFFECTED_HOME],
         },
       ],
       id:      'HOME_C',
@@ -107,12 +100,172 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
   ) as IQuestion;
 
   /**
+   * Home: zip code
+   */
+  const HOME_D: IQuestion = merge(
+    {
+      branch:            HOME_BRANCH,
+      entryRequirements: [
+        {
+          explanation: 'Disaster affected home',
+          responses:   [AFFECTED_HOME],
+        },
+      ],
+      id:      'HOME_D',
+      section: { id: 'introduction' },
+      type:    QUESTION_TYPE.MULTIPLE_CHOICE,
+    },
+    json.HOME_D,
+  ) as IQuestion;
+
+  /**
+   * Home: disaster events
+   */
+  const HOME_E: IQuestion = merge(
+    {
+      branch:            HOME_BRANCH,
+      entryRequirements: [
+        {
+          explanation: 'Disaster affected home',
+          responses:   [AFFECTED_HOME],
+        },
+      ],
+      id:      'HOME_E',
+      section: { id: 'introduction' },
+      type:    QUESTION_TYPE.MULTIPLE_CHOICE,
+    },
+    json.HOME_E,
+  ) as IQuestion;
+
+  /**
+   * Home: loan usage - own
+   */
+  const HOME_FA: IQuestion = merge(
+    {
+      branch:            HOME_BRANCH,
+      entryRequirements: [
+        {
+          explanation: 'Disaster affected home',
+          responses:   [AFFECTED_HOME],
+        },
+      ],
+      id:      'HOME_FA',
+      section: { id: 'introduction' },
+      type:    QUESTION_TYPE.MULTIPLE_CHOICE,
+    },
+    json.HOME_FA,
+  ) as IQuestion;
+
+  /**
+   * Home: age
+   */
+  const HOME_G: IQuestion = merge(
+    {
+      branch:            HOME_BRANCH,
+      entryRequirements: [
+        {
+          explanation: 'Disaster affected home',
+          responses:   [AFFECTED_HOME],
+        },
+      ],
+      id:      'HOME_G',
+      section: { id: 'introduction' },
+      type:    QUESTION_TYPE.MULTIPLE_CHOICE,
+    },
+    json.HOME_G,
+  ) as IQuestion;
+
+  /**
+   * Home: people living at home
+   */
+  const HOME_H: IQuestion = merge(
+    {
+      branch:            HOME_BRANCH,
+      entryRequirements: [
+        {
+          explanation: 'Disaster affected home',
+          responses:   [AFFECTED_HOME],
+        },
+      ],
+      id:      'HOME_H',
+      section: { id: 'introduction' },
+      type:    QUESTION_TYPE.MULTIPLE_CHOICE,
+    },
+    json.HOME_H,
+  ) as IQuestion;
+
+  /**
+   * Home: people depending on income
+   */
+  const HOME_I: IQuestion = merge(
+    {
+      branch:            HOME_BRANCH,
+      entryRequirements: [
+        {
+          explanation: 'Disaster affected home',
+          responses:   [AFFECTED_HOME],
+        },
+      ],
+      id:      'HOME_I',
+      section: { id: 'introduction' },
+      type:    QUESTION_TYPE.MULTIPLE_CHOICE,
+    },
+    json.HOME_I,
+  ) as IQuestion;
+
+  /**
+   * Home: income
+   */
+  const HOME_J: IQuestion = merge(
+    {
+      branch:            HOME_BRANCH,
+      entryRequirements: [
+        {
+          explanation: 'Disaster affected home',
+          responses:   [AFFECTED_HOME],
+        },
+      ],
+      id:      'HOME_J',
+      section: { id: 'introduction' },
+      type:    QUESTION_TYPE.MULTIPLE_CHOICE,
+    },
+    json.HOME_J,
+  ) as IQuestion;
+
+  /**
+   * Home: debt
+   */
+  const HOME_K: IQuestion = merge(
+    {
+      branch:            HOME_BRANCH,
+      entryRequirements: [
+        {
+          explanation: 'Disaster affected home',
+          responses:   [AFFECTED_HOME],
+        },
+      ],
+      id:      'HOME_K',
+      section: { id: 'introduction' },
+      type:    QUESTION_TYPE.MULTIPLE_CHOICE,
+    },
+    json.HOME_K,
+  ) as IQuestion;
+
+  /**
    * Map of questions for use elsewhere
    */
   const questionMap = {
     A,
     HOME_B,
     HOME_C,
+    HOME_D,
+    HOME_E,
+    HOME_FA,
+    HOME_G,
+    HOME_H,
+    HOME_I,
+    HOME_J,
+    HOME_K,
   };
 
   /**
@@ -122,6 +275,14 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
     A,
     HOME_B,
     HOME_C,
+    HOME_D,
+    HOME_E,
+    HOME_FA,
+    HOME_G,
+    HOME_H,
+    HOME_I,
+    HOME_J,
+    HOME_K,
   ];
 
   // Note: the order should match the logical order
@@ -132,6 +293,14 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
       A,
       HOME_B,
       HOME_C,
+      HOME_D,
+      HOME_E,
+      HOME_FA,
+      HOME_G,
+      HOME_H,
+      HOME_I,
+      HOME_J,
+      HOME_K,
     ].map((q) => ({ id: q.id })),
   };
 
