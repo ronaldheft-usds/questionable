@@ -21,6 +21,8 @@ export enum CSS_CLASS {
   NO_RESULTS_BODY = 'usds-q-no-results-body',
   NO_RESULTS_HEADER = 'usds-q-no-results-header',
   NO_RESULTS_SUBHEADER = 'usds-q-no-results-subheader',
+  NUMBER_INPUT = 'usds-q-number-input',
+  NUMBER_INPUT_GROUP = 'usds-q-number-input-group',
   PROGRESS_BAR = 'usds-q-progress-bar',
   PROGRESS_BAR_BOTTOM_SECTION = 'usds-q-progress-bar-bottom-section',
   PROGRESS_BAR_TOP_SECTION = 'usds-q-progress-bar-top-section',

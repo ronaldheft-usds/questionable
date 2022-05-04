@@ -124,7 +124,7 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
       ],
       id:      'HOME_D',
       section: { id: 'introduction' },
-      type:    QUESTION_TYPE.MULTIPLE_CHOICE,
+      type:    QUESTION_TYPE.NUMBER,
     },
     json.HOME_D,
   ) as IQuestion;
@@ -178,7 +178,7 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
   ) as IQuestion;
 
   /**
-   * Home: loan usage - own
+   * Home: loan usage - rent
    */
   const HOME_FB: IQuestion = merge(
     {

@@ -1,11 +1,18 @@
 /* eslint-disable no-param-reassign */
-import { Checkbox, Fieldset, Radio } from '@trussworks/react-uswds';
-import { merge }                     from 'lodash';
-import { DateTime }                  from 'luxon';
+import {
+  FormEvent,
+  KeyboardEvent,
+} from 'react';
+import {
+  Checkbox, Fieldset, FormGroup, Radio, TextInput,
+} from '@trussworks/react-uswds';
+import { merge }    from 'lodash';
+import { DateTime } from 'luxon';
 import {
   TDateOfBirthCore,
   getDateTime,
   ACTION_TYPE,
+  QUESTION_TYPE,
 } from '@usds.gov/questionable-core';
 import { QuestionableConfig } from '../../composable/QuestionableConfig';
 import { IQuestion }          from '../../survey';
@@ -173,6 +180,67 @@ export abstract class Questions {
       >
         {props.step.answers.map((a) => Questions.getCheckbox(a, props, config))}
       </Fieldset>
+    );
+  }
+
+  /**
+   * Generates a number input given a question definition
+   * @param answer
+   * @param props
+   * @returns
+   */
+  private static getNumber(
+    question: IRef,
+    props: IQuestionData,
+    config: QuestionableConfig,
+  ): JSX.Element {
+    const title = Questions.getString(question);
+    const id    = Steps.getDomId(title, props);
+
+    const handler = (e: FormEvent<HTMLInputElement>) => {
+      Questions.updateForm(e.currentTarget.value, props, config);
+    };
+
+    const validator = (e: KeyboardEvent<HTMLInputElement>) => {
+      if (e.defaultPrevented) {
+        return; // Should do nothing if the default action has been cancelled
+      }
+      const isNumber = /[0-9]/;
+      if (!isNumber.test(e.key)) {
+        e.preventDefault();
+      }
+    };
+
+    return (
+      <TextInput
+        id={id}
+        key={id}
+        type="text"
+        inputSize='medium'
+        name={Steps.getFieldSetName(props)}
+        className={CSS_CLASS.NUMBER_INPUT}
+        onChange={handler}
+        onClick={handler}
+        onKeyPress={validator}
+      />
+    );
+  }
+
+  /**
+   * Gets a number input
+   * @param props
+   * @returns
+   */
+  public static getNumberInput(
+    props: IQuestionData,
+    config: QuestionableConfig,
+  ): JSX.Element {
+    return (
+      <FormGroup
+        className={CSS_CLASS.NUMBER_INPUT_GROUP}
+      >
+        {Questions.getNumber(props.step, props, config)}
+      </FormGroup>
     );
   }
 

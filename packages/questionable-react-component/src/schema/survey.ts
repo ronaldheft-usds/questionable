@@ -259,7 +259,7 @@ export const survey = {
                   "entryRequirements": {
                     "description": "Collection of requirements to view/enter this step",
                     "items": {
-                      "$ref": "#/definitions/interface-d.ts-6246-7023-d.ts-0-58866408250476"
+                      "$ref": "#/definitions/interface-d.ts-6348-7125-d.ts-0-58968408250476"
                     },
                     "title": "Requirements",
                     "type": "array"
@@ -267,7 +267,7 @@ export const survey = {
                   "exitRequirements": {
                     "description": "Collection of requirements to leave this step",
                     "items": {
-                      "$ref": "#/definitions/interface-d.ts-6246-7023-d.ts-0-58866408250476"
+                      "$ref": "#/definitions/interface-d.ts-6348-7125-d.ts-0-58968408250476"
                     },
                     "title": "Exit Requirements",
                     "type": "array"
@@ -299,7 +299,7 @@ export const survey = {
                       "requirements": {
                         "description": "Collection of requirements to enable display of this status",
                         "items": {
-                          "$ref": "#/definitions/interface-d.ts-6246-7023-d.ts-0-58866408250476"
+                          "$ref": "#/definitions/interface-d.ts-6348-7125-d.ts-0-58968408250476"
                         },
                         "title": "Requirements",
                         "type": "array"
@@ -323,7 +323,9 @@ export const survey = {
                     "enum": [
                       "dob",
                       "multiple_choice",
-                      "multiple_select"
+                      "multiple_select",
+                      "number",
+                      "zip"
                     ],
                     "title": "Question Type",
                     "type": "string"
@@ -794,7 +796,7 @@ export const survey = {
                   "entryRequirements": {
                     "description": "Collection of requirements to view/enter this step",
                     "items": {
-                      "$ref": "#/definitions/interface-d.ts-6246-7023-d.ts-0-58866408250476"
+                      "$ref": "#/definitions/interface-d.ts-6348-7125-d.ts-0-58968408250476"
                     },
                     "title": "Requirements",
                     "type": "array"
@@ -802,7 +804,7 @@ export const survey = {
                   "exitRequirements": {
                     "description": "Collection of requirements to leave this step",
                     "items": {
-                      "$ref": "#/definitions/interface-d.ts-6246-7023-d.ts-0-58866408250476"
+                      "$ref": "#/definitions/interface-d.ts-6348-7125-d.ts-0-58968408250476"
                     },
                     "title": "Exit Requirements",
                     "type": "array"
@@ -834,7 +836,7 @@ export const survey = {
                       "requirements": {
                         "description": "Collection of requirements to enable display of this status",
                         "items": {
-                          "$ref": "#/definitions/interface-d.ts-6246-7023-d.ts-0-58866408250476"
+                          "$ref": "#/definitions/interface-d.ts-6348-7125-d.ts-0-58968408250476"
                         },
                         "title": "Requirements",
                         "type": "array"
@@ -858,7 +860,9 @@ export const survey = {
                     "enum": [
                       "dob",
                       "multiple_choice",
-                      "multiple_select"
+                      "multiple_select",
+                      "number",
+                      "zip"
                     ],
                     "title": "Question Type",
                     "type": "string"
@@ -1152,7 +1156,9 @@ export const survey = {
           "enum": [
             "dob",
             "multiple_choice",
-            "multiple_select"
+            "multiple_select",
+            "number",
+            "zip"
           ],
           "title": "Step Type",
           "type": "string"
@@ -1281,7 +1287,7 @@ export const survey = {
                   "entryRequirements": {
                     "description": "Collection of requirements to view/enter this step",
                     "items": {
-                      "$ref": "#/definitions/interface-d.ts-6246-7023-d.ts-0-58866408250476"
+                      "$ref": "#/definitions/interface-d.ts-6348-7125-d.ts-0-58968408250476"
                     },
                     "title": "Requirements",
                     "type": "array"
@@ -1289,7 +1295,7 @@ export const survey = {
                   "exitRequirements": {
                     "description": "Collection of requirements to leave this step",
                     "items": {
-                      "$ref": "#/definitions/interface-d.ts-6246-7023-d.ts-0-58866408250476"
+                      "$ref": "#/definitions/interface-d.ts-6348-7125-d.ts-0-58968408250476"
                     },
                     "title": "Exit Requirements",
                     "type": "array"
@@ -1321,7 +1327,7 @@ export const survey = {
                       "requirements": {
                         "description": "Collection of requirements to enable display of this status",
                         "items": {
-                          "$ref": "#/definitions/interface-d.ts-6246-7023-d.ts-0-58866408250476"
+                          "$ref": "#/definitions/interface-d.ts-6348-7125-d.ts-0-58968408250476"
                         },
                         "title": "Requirements",
                         "type": "array"
@@ -1345,7 +1351,9 @@ export const survey = {
                     "enum": [
                       "dob",
                       "multiple_choice",
-                      "multiple_select"
+                      "multiple_select",
+                      "number",
+                      "zip"
                     ],
                     "title": "Question Type",
                     "type": "string"
@@ -2103,6 +2111,8 @@ export const survey = {
             "dob",
             "multiple_choice",
             "multiple_select",
+            "number",
+            "zip",
             "Edit"
           ],
           "title": "Step Type",
@@ -2485,7 +2495,7 @@ export const survey = {
                       "entryRequirements": {
                         "description": "Collection of requirements to view/enter this step",
                         "items": {
-                          "$ref": "#/definitions/interface-d.ts-6246-7023-d.ts-0-58866408250476"
+                          "$ref": "#/definitions/interface-d.ts-6348-7125-d.ts-0-58968408250476"
                         },
                         "title": "Requirements",
                         "type": "array"
@@ -2493,7 +2503,7 @@ export const survey = {
                       "exitRequirements": {
                         "description": "Collection of requirements to leave this step",
                         "items": {
-                          "$ref": "#/definitions/interface-d.ts-6246-7023-d.ts-0-58866408250476"
+                          "$ref": "#/definitions/interface-d.ts-6348-7125-d.ts-0-58968408250476"
                         },
                         "title": "Exit Requirements",
                         "type": "array"
@@ -2525,7 +2535,7 @@ export const survey = {
                           "requirements": {
                             "description": "Collection of requirements to enable display of this status",
                             "items": {
-                              "$ref": "#/definitions/interface-d.ts-6246-7023-d.ts-0-58866408250476"
+                              "$ref": "#/definitions/interface-d.ts-6348-7125-d.ts-0-58968408250476"
                             },
                             "title": "Requirements",
                             "type": "array"
@@ -2549,7 +2559,9 @@ export const survey = {
                         "enum": [
                           "dob",
                           "multiple_choice",
-                          "multiple_select"
+                          "multiple_select",
+                          "number",
+                          "zip"
                         ],
                         "title": "Question Type",
                         "type": "string"
@@ -2730,7 +2742,9 @@ export const survey = {
                                   "enum": [
                                     "dob",
                                     "multiple_choice",
-                                    "multiple_select"
+                                    "multiple_select",
+                                    "number",
+                                    "zip"
                                   ],
                                   "title": "Question Type",
                                   "type": "string"
@@ -2904,7 +2918,9 @@ export const survey = {
                                   "enum": [
                                     "dob",
                                     "multiple_choice",
-                                    "multiple_select"
+                                    "multiple_select",
+                                    "number",
+                                    "zip"
                                   ],
                                   "title": "Question Type",
                                   "type": "string"
@@ -2958,7 +2974,7 @@ export const survey = {
                     "requirements": {
                       "description": "Collection of requirements to enable display of this status",
                       "items": {
-                        "$ref": "#/definitions/interface-d.ts-6246-7023-d.ts-0-58866408250476"
+                        "$ref": "#/definitions/interface-d.ts-6348-7125-d.ts-0-58968408250476"
                       },
                       "title": "Requirements",
                       "type": "array"
@@ -2987,6 +3003,8 @@ export const survey = {
                     "dob",
                     "multiple_choice",
                     "multiple_select",
+                    "number",
+                    "zip",
                     "Edit"
                   ],
                   "title": "Step Type",
@@ -3053,7 +3071,7 @@ export const survey = {
       ],
       "type": "object"
     },
-    "interface-d.ts-6246-7023-d.ts-0-58866408250476": {
+    "interface-d.ts-6348-7125-d.ts-0-58968408250476": {
       "description": "Defines an individual requirement for accessing a step",
       "properties": {
         "explanation": {
@@ -3198,7 +3216,9 @@ export const survey = {
                     "enum": [
                       "dob",
                       "multiple_choice",
-                      "multiple_select"
+                      "multiple_select",
+                      "number",
+                      "zip"
                     ],
                     "title": "Question Type",
                     "type": "string"

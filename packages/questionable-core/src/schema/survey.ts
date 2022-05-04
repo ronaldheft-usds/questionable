@@ -1039,7 +1039,9 @@ export const survey = {
       "enum": [
         "dob",
         "multiple_choice",
-        "multiple_select"
+        "multiple_select",
+        "number",
+        "zip"
       ],
       "type": "string"
     },

@@ -9,6 +9,7 @@ import {
   DateOfBirthStep,
   MultipleChoiceStep,
   MultiSelectStep,
+  NumberStep,
 } from '../questions';
 
 /**
@@ -33,6 +34,9 @@ export const QuestionFactory = (props: IStepData): JSX.Element => {
       return <MultipleChoiceStep {...stepData} />;
     case QUESTION_TYPE.MULTIPLE_SELECT:
       return <MultiSelectStep {...stepData} />;
+    case QUESTION_TYPE.NUMBER:
+    case QUESTION_TYPE.ZIP:
+      return <NumberStep {...stepData} />;
     default:
       return noel('Question does not exist', 'QuestionFactory');
   }
