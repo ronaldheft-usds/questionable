@@ -14,6 +14,10 @@ export interface IRefCore {
    */
   order?: number;
   /**
+   * @title SubTitle
+   */
+  subTitle?: string;
+  /**
    * @title Title
    */
   title?: string;

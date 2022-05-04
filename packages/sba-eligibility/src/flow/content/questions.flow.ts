@@ -61,7 +61,10 @@ const HOME_D: Partial<IQuestion> = {
  * Home: disaster events
  */
 const HOME_E: Partial<IQuestion> = {
-  answers:  [YES, NO],
+  answers: [
+    { id: '0', subTitle: 'Severe Storms, Straight-line Winds, Flooding, and Tornadoes', title: 'Warren county, Kentucky on December 10, 2021' },
+    { id: '1', subTitle: 'Flooding and Tornadoes', title: 'Edmonson county, Kentucky on December 10, 2021' },
+  ],
   id:       'HOME_E',
   subTitle: 'ZIP Code: 42101',
   title:    'Looks like there were a few events where you live. Which one(s) affected you?',

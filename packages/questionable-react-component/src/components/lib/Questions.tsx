@@ -12,7 +12,6 @@ import {
   TDateOfBirthCore,
   getDateTime,
   ACTION_TYPE,
-  QUESTION_TYPE,
 } from '@usds.gov/questionable-core';
 import { QuestionableConfig } from '../../composable/QuestionableConfig';
 import { IQuestion }          from '../../survey';
@@ -153,6 +152,7 @@ export abstract class Questions {
         key={id}
         name={Steps.getFieldSetName(props)}
         label={title}
+        labelDescription={answer.subTitle}
         value={title}
         checked={Questions.isSelected(title, props) === true}
         className={CSS_CLASS.MULTI_SELECT}

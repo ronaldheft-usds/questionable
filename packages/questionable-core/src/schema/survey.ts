@@ -56,6 +56,10 @@ export const survey = {
           },
           "type": "array"
         },
+        "subTitle": {
+          "title": "SubTitle",
+          "type": "string"
+        },
         "title": {
           "title": "Title",
           "type": "string"
@@ -85,6 +89,10 @@ export const survey = {
         "link": {
           "description": "Link to tie to button click",
           "title": "Link",
+          "type": "string"
+        },
+        "subTitle": {
+          "title": "SubTitle",
           "type": "string"
         },
         "title": {
@@ -118,6 +126,10 @@ export const survey = {
         "link": {
           "description": "Link to tie to button click",
           "title": "Link",
+          "type": "string"
+        },
+        "subTitle": {
+          "title": "SubTitle",
           "type": "string"
         },
         "title": {
@@ -336,6 +348,7 @@ export const survey = {
               "title": "Requirements",
               "type": "array"
             },
+            "subTitle": {},
             "title": {}
           },
           "title": "Section",
@@ -519,6 +532,7 @@ export const survey = {
               "title": "Requirements",
               "type": "array"
             },
+            "subTitle": {},
             "title": {}
           },
           "title": "Section",
@@ -732,6 +746,10 @@ export const survey = {
           "title": "Id",
           "type": "string"
         },
+        "subTitle": {
+          "title": "SubTitle",
+          "type": "string"
+        },
         "title": {
           "title": "Title",
           "type": "string"
@@ -783,6 +801,10 @@ export const survey = {
               "id": {
                 "description": "Unique identifier",
                 "title": "Id",
+                "type": "string"
+              },
+              "subTitle": {
+                "title": "SubTitle",
                 "type": "string"
               },
               "title": {
@@ -858,6 +880,10 @@ export const survey = {
           "title": "Requirements",
           "type": "array"
         },
+        "subTitle": {
+          "title": "SubTitle",
+          "type": "string"
+        },
         "title": {
           "title": "Title",
           "type": "string"
@@ -885,6 +911,10 @@ export const survey = {
           },
           "title": "Requirements",
           "type": "array"
+        },
+        "subTitle": {
+          "title": "SubTitle",
+          "type": "string"
         },
         "title": {
           "title": "Title",
@@ -961,6 +991,7 @@ export const survey = {
               "title": "Requirements",
               "type": "array"
             },
+            "subTitle": {},
             "title": {}
           },
           "title": "Section",

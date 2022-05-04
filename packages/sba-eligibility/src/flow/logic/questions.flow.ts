@@ -124,7 +124,7 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
       ],
       id:      'HOME_D',
       section: { id: 'introduction' },
-      type:    QUESTION_TYPE.NUMBER,
+      type:    QUESTION_TYPE.ZIP,
     },
     json.HOME_D,
   ) as IQuestion;
@@ -146,7 +146,7 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
       ],
       id:      'HOME_E',
       section: { id: 'introduction' },
-      type:    QUESTION_TYPE.MULTIPLE_CHOICE,
+      type:    QUESTION_TYPE.MULTIPLE_SELECT,
     },
     json.HOME_E,
   ) as IQuestion;
