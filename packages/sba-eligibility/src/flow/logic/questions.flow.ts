@@ -220,7 +220,7 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
       ],
       id:      'HOME_G',
       section: { id: 'introduction' },
-      type:    QUESTION_TYPE.MULTIPLE_CHOICE,
+      type:    QUESTION_TYPE.NUMBER,
     },
     json.HOME_G,
   ) as IQuestion;
@@ -242,7 +242,7 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
       ],
       id:      'HOME_H',
       section: { id: 'introduction' },
-      type:    QUESTION_TYPE.MULTIPLE_CHOICE,
+      type:    QUESTION_TYPE.NUMBER,
     },
     json.HOME_H,
   ) as IQuestion;
@@ -264,7 +264,7 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
       ],
       id:      'HOME_I',
       section: { id: 'introduction' },
-      type:    QUESTION_TYPE.MULTIPLE_CHOICE,
+      type:    QUESTION_TYPE.NUMBER,
     },
     json.HOME_I,
   ) as IQuestion;
@@ -286,7 +286,7 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
       ],
       id:      'HOME_J',
       section: { id: 'introduction' },
-      type:    QUESTION_TYPE.MULTIPLE_CHOICE,
+      type:    QUESTION_TYPE.NUMBER,
     },
     json.HOME_J,
   ) as IQuestion;
@@ -308,7 +308,7 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
       ],
       id:      'HOME_K',
       section: { id: 'introduction' },
-      type:    QUESTION_TYPE.MULTIPLE_CHOICE,
+      type:    QUESTION_TYPE.NUMBER,
     },
     json.HOME_K,
   ) as IQuestion;

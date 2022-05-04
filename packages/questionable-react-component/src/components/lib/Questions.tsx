@@ -94,6 +94,7 @@ export abstract class Questions {
         key={id}
         name={Steps.getFieldSetName(props)}
         label={title}
+        labelDescription={answer.subTitle}
         value={title}
         checked={Questions.isSelected(title, props) === true}
         className={CSS_CLASS.MULTI_CHOICE}
