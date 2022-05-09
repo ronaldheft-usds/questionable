@@ -146,7 +146,7 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
       ],
       id:      'HOME_E',
       section: { id: 'introduction' },
-      type:    QUESTION_TYPE.MULTIPLE_SELECT,
+      type:    QUESTION_TYPE.MULTIPLE_CHOICE,
     },
     json.HOME_E,
   ) as IQuestion;

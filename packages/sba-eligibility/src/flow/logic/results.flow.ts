@@ -16,6 +16,8 @@ export const buildResults = (json: TResultMap, questionMap: TQuestionMap) => {
   const {
     HOME_C,
     HOME_E,
+    HOME_FA,
+    HOME_FB,
   } = questionMap;
 
   /**
@@ -46,7 +48,8 @@ export const buildResults = (json: TResultMap, questionMap: TQuestionMap) => {
       requirements: [
         {
           responses: [
-            { answers: [YES], question: HOME_E },
+            { answers: [YES], question: HOME_C },
+            { answers: [{ id: '0' }, { id: '1' }], question: HOME_E },
           ],
         },
       ],
@@ -55,16 +58,148 @@ export const buildResults = (json: TResultMap, questionMap: TQuestionMap) => {
   ) as IResult;
 
   /**
+   * Home - own physical damage
+   */
+  const r3a: IResult = merge(
+    {
+      action:       LEARN_HOW_TO_APPLY_ACTION,
+      id:           'r3a',
+      requirements: [
+        {
+          responses: [
+            { answers: [YES], question: HOME_C },
+            { answers: [{ id: '0' }, { id: '1' }], question: HOME_E },
+            { answers: [YES], question: HOME_FA },
+          ],
+        },
+      ],
+    },
+    json.r3a,
+  ) as IResult;
+
+  /**
+   * Home - rent physical damage
+   */
+  const r3b: IResult = merge(
+    {
+      action:       LEARN_HOW_TO_APPLY_ACTION,
+      id:           'r3b',
+      requirements: [
+        {
+          responses: [
+            { answers: [YES], question: HOME_C },
+            { answers: [{ id: '0' }, { id: '1' }], question: HOME_E },
+            { answers: [YES], question: HOME_FB },
+          ],
+        },
+      ],
+    },
+    json.r3b,
+  ) as IResult;
+
+  /**
+   * Home - borrow money
+   */
+  const r4a: IResult = merge(
+    {
+      action:       LEARN_HOW_TO_APPLY_ACTION,
+      id:           'r4a',
+      requirements: [
+        {
+          responses: [
+            { answers: [YES], question: HOME_C },
+            { answers: [{ id: '0' }, { id: '1' }], question: HOME_E },
+            { answers: [YES], question: HOME_FA },
+          ],
+        },
+      ],
+    },
+    json.r4a,
+  ) as IResult;
+
+  /**
+   * Home - borrow money
+   */
+  const r4b: IResult = merge(
+    {
+      action:       LEARN_HOW_TO_APPLY_ACTION,
+      id:           'r4b',
+      requirements: [
+        {
+          responses: [
+            { answers: [YES], question: HOME_C },
+            { answers: [{ id: '0' }, { id: '1' }], question: HOME_E },
+            { answers: [YES], question: HOME_FB },
+          ],
+        },
+      ],
+    },
+    json.r4b,
+  ) as IResult;
+
+  /**
+   * Home - repay money
+   */
+  const r5a: IResult = merge(
+    {
+      action:       LEARN_HOW_TO_APPLY_ACTION,
+      id:           'r5a',
+      requirements: [
+        {
+          responses: [
+            { answers: [YES], question: HOME_C },
+            { answers: [{ id: '0' }, { id: '1' }], question: HOME_E },
+            { answers: [YES], question: HOME_FA },
+          ],
+        },
+      ],
+    },
+    json.r5a,
+  ) as IResult;
+
+  /**
+   * Home - repay money
+   */
+  const r5b: IResult = merge(
+    {
+      action:       LEARN_HOW_TO_APPLY_ACTION,
+      id:           'r5b',
+      requirements: [
+        {
+          responses: [
+            { answers: [YES], question: HOME_C },
+            { answers: [{ id: '0' }, { id: '1' }], question: HOME_E },
+            { answers: [YES], question: HOME_FB },
+          ],
+        },
+      ],
+    },
+    json.r5b,
+  ) as IResult;
+
+  /**
    * All possible results with their requirements
    */
   const resultList: IResult[] = [
     r1,
     r2,
+    r3a,
+    r3b,
+    r4a,
+    r4b,
+    r5a,
+    r5b,
   ];
 
   const resultMap = {
     r1,
     r2,
+    r3a,
+    r3b,
+    r4a,
+    r4b,
+    r5a,
+    r5b,
   };
 
   return {
