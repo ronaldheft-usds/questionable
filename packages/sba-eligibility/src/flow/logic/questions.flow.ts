@@ -206,7 +206,7 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
   /**
    * Home: age
    */
-  const HOME_G: IQuestion = merge(
+  const HOME_GA: IQuestion = merge(
     {
       branch:            HOME_BRANCH,
       entryRequirements: [
@@ -215,20 +215,55 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
           responses:   [
             AFFECTED_HOME,
             PRIMARY_RESIDENCE,
+            {
+              answers:  [OWN],
+              question: HOME_B,
+            },
+            {
+              answers:  [YES],
+              question: HOME_FA,
+            },
           ],
         },
       ],
-      id:      'HOME_G',
+      id:      'HOME_GA',
       section: { id: 'introduction' },
       type:    QUESTION_TYPE.NUMBER,
     },
-    json.HOME_G,
+    json.HOME_GA,
+  ) as IQuestion;
+
+  const HOME_GB: IQuestion = merge(
+    {
+      branch:            HOME_BRANCH,
+      entryRequirements: [
+        {
+          explanation: 'Disaster affected home',
+          responses:   [
+            AFFECTED_HOME,
+            PRIMARY_RESIDENCE,
+            {
+              answers:  [RENT],
+              question: HOME_B,
+            },
+            {
+              answers:  [YES],
+              question: HOME_FB,
+            },
+          ],
+        },
+      ],
+      id:      'HOME_GB',
+      section: { id: 'introduction' },
+      type:    QUESTION_TYPE.NUMBER,
+    },
+    json.HOME_GB,
   ) as IQuestion;
 
   /**
    * Home: people living at home
    */
-  const HOME_H: IQuestion = merge(
+  const HOME_HA: IQuestion = merge(
     {
       branch:            HOME_BRANCH,
       entryRequirements: [
@@ -237,20 +272,55 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
           responses:   [
             AFFECTED_HOME,
             PRIMARY_RESIDENCE,
+            {
+              answers:  [OWN],
+              question: HOME_B,
+            },
+            {
+              answers:  [YES],
+              question: HOME_FA,
+            },
           ],
         },
       ],
-      id:      'HOME_H',
+      id:      'HOME_HA',
       section: { id: 'introduction' },
       type:    QUESTION_TYPE.NUMBER,
     },
-    json.HOME_H,
+    json.HOME_HA,
+  ) as IQuestion;
+
+  const HOME_HB: IQuestion = merge(
+    {
+      branch:            HOME_BRANCH,
+      entryRequirements: [
+        {
+          explanation: 'Disaster affected home',
+          responses:   [
+            AFFECTED_HOME,
+            PRIMARY_RESIDENCE,
+            {
+              answers:  [RENT],
+              question: HOME_B,
+            },
+            {
+              answers:  [YES],
+              question: HOME_FB,
+            },
+          ],
+        },
+      ],
+      id:      'HOME_HB',
+      section: { id: 'introduction' },
+      type:    QUESTION_TYPE.NUMBER,
+    },
+    json.HOME_HB,
   ) as IQuestion;
 
   /**
    * Home: people depending on income
    */
-  const HOME_I: IQuestion = merge(
+  const HOME_IA: IQuestion = merge(
     {
       branch:            HOME_BRANCH,
       entryRequirements: [
@@ -259,20 +329,55 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
           responses:   [
             AFFECTED_HOME,
             PRIMARY_RESIDENCE,
+            {
+              answers:  [OWN],
+              question: HOME_B,
+            },
+            {
+              answers:  [YES],
+              question: HOME_FA,
+            },
           ],
         },
       ],
-      id:      'HOME_I',
+      id:      'HOME_IA',
       section: { id: 'introduction' },
       type:    QUESTION_TYPE.NUMBER,
     },
-    json.HOME_I,
+    json.HOME_IA,
+  ) as IQuestion;
+
+  const HOME_IB: IQuestion = merge(
+    {
+      branch:            HOME_BRANCH,
+      entryRequirements: [
+        {
+          explanation: 'Disaster affected home',
+          responses:   [
+            AFFECTED_HOME,
+            PRIMARY_RESIDENCE,
+            {
+              answers:  [RENT],
+              question: HOME_B,
+            },
+            {
+              answers:  [YES],
+              question: HOME_FB,
+            },
+          ],
+        },
+      ],
+      id:      'HOME_IB',
+      section: { id: 'introduction' },
+      type:    QUESTION_TYPE.NUMBER,
+    },
+    json.HOME_IB,
   ) as IQuestion;
 
   /**
    * Home: income
    */
-  const HOME_J: IQuestion = merge(
+  const HOME_JA: IQuestion = merge(
     {
       branch:            HOME_BRANCH,
       entryRequirements: [
@@ -281,20 +386,55 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
           responses:   [
             AFFECTED_HOME,
             PRIMARY_RESIDENCE,
+            {
+              answers:  [OWN],
+              question: HOME_B,
+            },
+            {
+              answers:  [YES],
+              question: HOME_FA,
+            },
           ],
         },
       ],
-      id:      'HOME_J',
+      id:      'HOME_JA',
       section: { id: 'introduction' },
       type:    QUESTION_TYPE.NUMBER,
     },
-    json.HOME_J,
+    json.HOME_JA,
+  ) as IQuestion;
+
+  const HOME_JB: IQuestion = merge(
+    {
+      branch:            HOME_BRANCH,
+      entryRequirements: [
+        {
+          explanation: 'Disaster affected home',
+          responses:   [
+            AFFECTED_HOME,
+            PRIMARY_RESIDENCE,
+            {
+              answers:  [RENT],
+              question: HOME_B,
+            },
+            {
+              answers:  [YES],
+              question: HOME_FB,
+            },
+          ],
+        },
+      ],
+      id:      'HOME_JB',
+      section: { id: 'introduction' },
+      type:    QUESTION_TYPE.NUMBER,
+    },
+    json.HOME_JB,
   ) as IQuestion;
 
   /**
    * Home: debt
    */
-  const HOME_K: IQuestion = merge(
+  const HOME_KA: IQuestion = merge(
     {
       branch:            HOME_BRANCH,
       entryRequirements: [
@@ -303,14 +443,49 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
           responses:   [
             AFFECTED_HOME,
             PRIMARY_RESIDENCE,
+            {
+              answers:  [OWN],
+              question: HOME_B,
+            },
+            {
+              answers:  [YES],
+              question: HOME_FA,
+            },
           ],
         },
       ],
-      id:      'HOME_K',
+      id:      'HOME_KA',
       section: { id: 'introduction' },
       type:    QUESTION_TYPE.NUMBER,
     },
-    json.HOME_K,
+    json.HOME_KA,
+  ) as IQuestion;
+
+  const HOME_KB: IQuestion = merge(
+    {
+      branch:            HOME_BRANCH,
+      entryRequirements: [
+        {
+          explanation: 'Disaster affected home',
+          responses:   [
+            AFFECTED_HOME,
+            PRIMARY_RESIDENCE,
+            {
+              answers:  [RENT],
+              question: HOME_B,
+            },
+            {
+              answers:  [YES],
+              question: HOME_FB,
+            },
+          ],
+        },
+      ],
+      id:      'HOME_KB',
+      section: { id: 'introduction' },
+      type:    QUESTION_TYPE.NUMBER,
+    },
+    json.HOME_KB,
   ) as IQuestion;
 
   /**
@@ -324,11 +499,16 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
     HOME_E,
     HOME_FA,
     HOME_FB,
-    HOME_G,
-    HOME_H,
-    HOME_I,
-    HOME_J,
-    HOME_K,
+    HOME_GA,
+    HOME_GB,
+    HOME_HA,
+    HOME_HB,
+    HOME_IA,
+    HOME_IB,
+    HOME_JA,
+    HOME_JB,
+    HOME_KA,
+    HOME_KB,
   };
 
   /**
@@ -342,11 +522,16 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
     HOME_E,
     HOME_FA,
     HOME_FB,
-    HOME_G,
-    HOME_H,
-    HOME_I,
-    HOME_J,
-    HOME_K,
+    HOME_GA,
+    HOME_GB,
+    HOME_HA,
+    HOME_HB,
+    HOME_IA,
+    HOME_IB,
+    HOME_JA,
+    HOME_JB,
+    HOME_KA,
+    HOME_KB,
   ];
 
   // Note: the order should match the logical order
@@ -361,11 +546,16 @@ export const buildQuestions = (json: TQuestionMap): Tq => {
       HOME_E,
       HOME_FA,
       HOME_FB,
-      HOME_G,
-      HOME_H,
-      HOME_I,
-      HOME_J,
-      HOME_K,
+      HOME_GA,
+      HOME_GB,
+      HOME_HA,
+      HOME_HB,
+      HOME_IA,
+      HOME_IB,
+      HOME_JA,
+      HOME_JB,
+      HOME_KA,
+      HOME_KB,
     ].map((q) => ({ id: q.id })),
   };
 

@@ -91,55 +91,60 @@ const HOME_FB: Partial<IQuestion> = {
 /**
  * Home: age
  */
-const HOME_G: Partial<IQuestion> = {
+const HOME_GA: Partial<IQuestion> = {
   answers:  [YES, NO],
-  id:       'HOME_G',
+  id:       'HOME_GA',
   subTitle: 'The legal age to borrow money varies based on where you live.',
   title:    'How old are you?',
 };
+const HOME_GB: Partial<IQuestion> = { ...HOME_GA, id: 'HOME_GB' };
 
 /**
  * Home: people living at home
  */
-const HOME_H: Partial<IQuestion> = {
+const HOME_HA: Partial<IQuestion> = {
   answers: [YES, NO],
-  id:      'HOME_H',
+  id:      'HOME_HA',
   info:    'Number of kids and adults in your home',
   title:   'How many people lived in your home when the sudden event happened?',
 };
+const HOME_HB: Partial<IQuestion> = { ...HOME_HA, id: 'HOME_HB' };
 
 /**
  * Home: people depending on income
  */
-const HOME_I: Partial<IQuestion> = {
+const HOME_IA: Partial<IQuestion> = {
   answers:  [YES, NO],
-  id:       'HOME_I',
+  id:       'HOME_IA',
   info:     'Number of kids and adults who depend on the same income',
   subTitle: 'You may have roommates, friends, extended family, or others who share your space but don\'t live off of the same income as you.',
   title:    'How many of those people depend on the same income?',
 };
+const HOME_IB: Partial<IQuestion> = { ...HOME_IA, id: 'HOME_IB' };
 
 /**
  * Home: income
  */
-const HOME_J: Partial<IQuestion> = {
+const HOME_JA: Partial<IQuestion> = {
   answers:  [YES, NO],
-  id:       'HOME_J',
+  id:       'HOME_JA',
   info:     'Estimate for total combined monthly income',
   subTitle: 'Estimate the total amount for everyone who depends on the same income in your home. Include money from jobs and government assistance (Social Security benefits, unemployment insurance, etc.).',
   title:    'How much money do you make every month?',
 };
+const HOME_JB: Partial<IQuestion> = { ...HOME_JA, id: 'HOME_JB' };
 
 /**
  * Home: debt
  */
-const HOME_K: Partial<IQuestion> = {
+const HOME_KA: Partial<IQuestion> = {
   answers:  [YES, NO],
-  id:       'HOME_K',
+  id:       'HOME_KA',
   info:     'Estimate for total combined debt',
   subTitle: 'Estimate the total amount for everyone who depends on the same income in your home. Debt includes things like car or student loans, credit card payments, and mortgages.',
   title:    'How much debt do you pay back every month?',
 };
+const HOME_KB: Partial<IQuestion> = { ...HOME_KA, id: 'HOME_KB' };
 
 export const questionContentMap: TQuestionMap = {
   A,
@@ -149,9 +154,14 @@ export const questionContentMap: TQuestionMap = {
   HOME_E,
   HOME_FA,
   HOME_FB,
-  HOME_G,
-  HOME_H,
-  HOME_I,
-  HOME_J,
-  HOME_K,
+  HOME_GA,
+  HOME_GB,
+  HOME_HA,
+  HOME_HB,
+  HOME_IA,
+  HOME_IB,
+  HOME_JA,
+  HOME_JB,
+  HOME_KA,
+  HOME_KB,
 };

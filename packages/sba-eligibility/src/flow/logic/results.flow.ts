@@ -20,41 +20,62 @@ export const buildResults = (json: TResultMap, questionMap: TQuestionMap) => {
     HOME_FB,
   } = questionMap;
 
+  const ELIGIBILITY_REQUIREMENTS_A = {
+    responses: [
+      { answers: [YES], question: HOME_C },
+      { answers: [{ id: '0' }, { id: '1' }], question: HOME_E },
+      { answers: [YES], question: HOME_FA },
+    ],
+  };
+
+  const ELIGIBILITY_REQUIREMENTS_B = {
+    responses: [
+      { answers: [YES], question: HOME_C },
+      { answers: [{ id: '0' }, { id: '1' }], question: HOME_E },
+      { answers: [YES], question: HOME_FB },
+    ],
+  };
+
   /**
    * Home - primary residence
    */
-  const r1: IResult = merge(
+  const r1a: IResult = merge(
     {
       action:       LEARN_HOW_TO_APPLY_ACTION,
-      id:           'r1',
-      requirements: [
-        {
-          responses: [
-            { answers: [YES], question: HOME_C },
-          ],
-        },
-      ],
+      id:           'r1a',
+      requirements: [ELIGIBILITY_REQUIREMENTS_A],
     },
-    json.r1,
+    json.r1a,
+  ) as IResult;
+
+  const r1b: IResult = merge(
+    {
+      action:       LEARN_HOW_TO_APPLY_ACTION,
+      id:           'r1b',
+      requirements: [ELIGIBILITY_REQUIREMENTS_B],
+    },
+    json.r1b,
   ) as IResult;
 
   /**
    * Home - area offering support
    */
-  const r2: IResult = merge(
+  const r2a: IResult = merge(
     {
       action:       LEARN_HOW_TO_APPLY_ACTION,
-      id:           'r2',
-      requirements: [
-        {
-          responses: [
-            { answers: [YES], question: HOME_C },
-            { answers: [{ id: '0' }, { id: '1' }], question: HOME_E },
-          ],
-        },
-      ],
+      id:           'r2a',
+      requirements: [ELIGIBILITY_REQUIREMENTS_A],
     },
-    json.r2,
+    json.r2a,
+  ) as IResult;
+
+  const r2b: IResult = merge(
+    {
+      action:       LEARN_HOW_TO_APPLY_ACTION,
+      id:           'r2b',
+      requirements: [ELIGIBILITY_REQUIREMENTS_B],
+    },
+    json.r2b,
   ) as IResult;
 
   /**
@@ -64,35 +85,16 @@ export const buildResults = (json: TResultMap, questionMap: TQuestionMap) => {
     {
       action:       LEARN_HOW_TO_APPLY_ACTION,
       id:           'r3a',
-      requirements: [
-        {
-          responses: [
-            { answers: [YES], question: HOME_C },
-            { answers: [{ id: '0' }, { id: '1' }], question: HOME_E },
-            { answers: [YES], question: HOME_FA },
-          ],
-        },
-      ],
+      requirements: [ELIGIBILITY_REQUIREMENTS_A],
     },
     json.r3a,
   ) as IResult;
 
-  /**
-   * Home - rent physical damage
-   */
   const r3b: IResult = merge(
     {
       action:       LEARN_HOW_TO_APPLY_ACTION,
       id:           'r3b',
-      requirements: [
-        {
-          responses: [
-            { answers: [YES], question: HOME_C },
-            { answers: [{ id: '0' }, { id: '1' }], question: HOME_E },
-            { answers: [YES], question: HOME_FB },
-          ],
-        },
-      ],
+      requirements: [ELIGIBILITY_REQUIREMENTS_B],
     },
     json.r3b,
   ) as IResult;
@@ -104,35 +106,16 @@ export const buildResults = (json: TResultMap, questionMap: TQuestionMap) => {
     {
       action:       LEARN_HOW_TO_APPLY_ACTION,
       id:           'r4a',
-      requirements: [
-        {
-          responses: [
-            { answers: [YES], question: HOME_C },
-            { answers: [{ id: '0' }, { id: '1' }], question: HOME_E },
-            { answers: [YES], question: HOME_FA },
-          ],
-        },
-      ],
+      requirements: [ELIGIBILITY_REQUIREMENTS_A],
     },
     json.r4a,
   ) as IResult;
 
-  /**
-   * Home - borrow money
-   */
   const r4b: IResult = merge(
     {
       action:       LEARN_HOW_TO_APPLY_ACTION,
       id:           'r4b',
-      requirements: [
-        {
-          responses: [
-            { answers: [YES], question: HOME_C },
-            { answers: [{ id: '0' }, { id: '1' }], question: HOME_E },
-            { answers: [YES], question: HOME_FB },
-          ],
-        },
-      ],
+      requirements: [ELIGIBILITY_REQUIREMENTS_B],
     },
     json.r4b,
   ) as IResult;
@@ -144,35 +127,16 @@ export const buildResults = (json: TResultMap, questionMap: TQuestionMap) => {
     {
       action:       LEARN_HOW_TO_APPLY_ACTION,
       id:           'r5a',
-      requirements: [
-        {
-          responses: [
-            { answers: [YES], question: HOME_C },
-            { answers: [{ id: '0' }, { id: '1' }], question: HOME_E },
-            { answers: [YES], question: HOME_FA },
-          ],
-        },
-      ],
+      requirements: [ELIGIBILITY_REQUIREMENTS_A],
     },
     json.r5a,
   ) as IResult;
 
-  /**
-   * Home - repay money
-   */
   const r5b: IResult = merge(
     {
       action:       LEARN_HOW_TO_APPLY_ACTION,
       id:           'r5b',
-      requirements: [
-        {
-          responses: [
-            { answers: [YES], question: HOME_C },
-            { answers: [{ id: '0' }, { id: '1' }], question: HOME_E },
-            { answers: [YES], question: HOME_FB },
-          ],
-        },
-      ],
+      requirements: [ELIGIBILITY_REQUIREMENTS_B],
     },
     json.r5b,
   ) as IResult;
@@ -181,8 +145,10 @@ export const buildResults = (json: TResultMap, questionMap: TQuestionMap) => {
    * All possible results with their requirements
    */
   const resultList: IResult[] = [
-    r1,
-    r2,
+    r1a,
+    r1b,
+    r2a,
+    r2b,
     r3a,
     r3b,
     r4a,
@@ -192,8 +158,10 @@ export const buildResults = (json: TResultMap, questionMap: TQuestionMap) => {
   ];
 
   const resultMap = {
-    r1,
-    r2,
+    r1a,
+    r1b,
+    r2a,
+    r2b,
     r3a,
     r3b,
     r4a,
