@@ -17,6 +17,8 @@ import {
 } from './lib/interfaces';
 import { buildEligibility }         from './flow/eligibility.flow';
 import { catchError, handleErrors } from './lib/error';
+import { Header }                   from './Header';
+import { Footer }                   from './Footer';
 
 type TErrFallback = { error: Error, resetErrorBoundary: () => void };
 function ErrorFallback({ error, resetErrorBoundary }: TErrFallback) {
@@ -51,8 +53,10 @@ export const AppContainer = (data: any = {}): JSX.Element => {
   };
 
   return (
-    <div>
+    <div className="questionable-root">
+      <Header></Header>
       <Questionable {...args} />
+      <Footer></Footer>
     </div>
   );
 };

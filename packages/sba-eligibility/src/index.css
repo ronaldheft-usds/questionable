@@ -3,6 +3,10 @@ body {
   font-family: sans-serif;
 }
 
+header.usa-header {
+  border-bottom: 1px solid #dfe1e2;
+}
+
 footer {
   margin-top: 60px;
   color: #999;
