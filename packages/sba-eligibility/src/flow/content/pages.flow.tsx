@@ -3,10 +3,12 @@ import { PAGE_TYPE } from '@usds.gov/questionable-react-component';
 
 export const pageContent = {
   noResultsPage: {
-    body:     '',
+    body: `
+    If you believe you do meet the requirements and want to start an application anyway, <a>learn how to apply</a>.
+`,
     id:       PAGE_TYPE.NO_RESULTS,
     subTitle: `
-    If you want to start an application anyway, <a>learn how to apply</a>.
+    Based on what you told us, you do not meet the initial criteria for a loan.<br><br>
 `,
     title: 'You\'re not eligible for a loan.',
   },
