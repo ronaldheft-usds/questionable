@@ -275,7 +275,7 @@ export const survey = {
                   "entryRequirements": {
                     "description": "Collection of requirements to view/enter this step",
                     "items": {
-                      "$ref": "#/definitions/interface-d.ts-6410-7187-d.ts-0-60004408250476"
+                      "$ref": "#/definitions/interface-d.ts-6530-7307-d.ts-0-60124408250476"
                     },
                     "title": "Requirements",
                     "type": "array"
@@ -283,7 +283,7 @@ export const survey = {
                   "exitRequirements": {
                     "description": "Collection of requirements to leave this step",
                     "items": {
-                      "$ref": "#/definitions/interface-d.ts-6410-7187-d.ts-0-60004408250476"
+                      "$ref": "#/definitions/interface-d.ts-6530-7307-d.ts-0-60124408250476"
                     },
                     "title": "Exit Requirements",
                     "type": "array"
@@ -291,6 +291,11 @@ export const survey = {
                   "footer": {
                     "description": "Optional footer text to display at the bottom of the step",
                     "title": "Footer",
+                    "type": "string"
+                  },
+                  "helperText": {
+                    "description": "Text to display below the form control",
+                    "title": "Helper Text",
                     "type": "string"
                   },
                   "id": {
@@ -315,7 +320,7 @@ export const survey = {
                       "requirements": {
                         "description": "Collection of requirements to enable display of this status",
                         "items": {
-                          "$ref": "#/definitions/interface-d.ts-6410-7187-d.ts-0-60004408250476"
+                          "$ref": "#/definitions/interface-d.ts-6530-7307-d.ts-0-60124408250476"
                         },
                         "title": "Requirements",
                         "type": "array"
@@ -651,6 +656,11 @@ export const survey = {
           "title": "Footer",
           "type": "string"
         },
+        "helperText": {
+          "description": "Text to display below the form control",
+          "title": "Helper Text",
+          "type": "string"
+        },
         "id": {
           "description": "Unique identifier",
           "title": "Id",
@@ -820,7 +830,7 @@ export const survey = {
                   "entryRequirements": {
                     "description": "Collection of requirements to view/enter this step",
                     "items": {
-                      "$ref": "#/definitions/interface-d.ts-6410-7187-d.ts-0-60004408250476"
+                      "$ref": "#/definitions/interface-d.ts-6530-7307-d.ts-0-60124408250476"
                     },
                     "title": "Requirements",
                     "type": "array"
@@ -828,7 +838,7 @@ export const survey = {
                   "exitRequirements": {
                     "description": "Collection of requirements to leave this step",
                     "items": {
-                      "$ref": "#/definitions/interface-d.ts-6410-7187-d.ts-0-60004408250476"
+                      "$ref": "#/definitions/interface-d.ts-6530-7307-d.ts-0-60124408250476"
                     },
                     "title": "Exit Requirements",
                     "type": "array"
@@ -836,6 +846,11 @@ export const survey = {
                   "footer": {
                     "description": "Optional footer text to display at the bottom of the step",
                     "title": "Footer",
+                    "type": "string"
+                  },
+                  "helperText": {
+                    "description": "Text to display below the form control",
+                    "title": "Helper Text",
                     "type": "string"
                   },
                   "id": {
@@ -860,7 +875,7 @@ export const survey = {
                       "requirements": {
                         "description": "Collection of requirements to enable display of this status",
                         "items": {
-                          "$ref": "#/definitions/interface-d.ts-6410-7187-d.ts-0-60004408250476"
+                          "$ref": "#/definitions/interface-d.ts-6530-7307-d.ts-0-60124408250476"
                         },
                         "title": "Requirements",
                         "type": "array"
@@ -1139,6 +1154,11 @@ export const survey = {
           "title": "Footer",
           "type": "string"
         },
+        "helperText": {
+          "description": "Text to display below the form control",
+          "title": "Helper Text",
+          "type": "string"
+        },
         "id": {
           "description": "Unique identifier",
           "title": "Id",
@@ -1321,7 +1341,7 @@ export const survey = {
                   "entryRequirements": {
                     "description": "Collection of requirements to view/enter this step",
                     "items": {
-                      "$ref": "#/definitions/interface-d.ts-6410-7187-d.ts-0-60004408250476"
+                      "$ref": "#/definitions/interface-d.ts-6530-7307-d.ts-0-60124408250476"
                     },
                     "title": "Requirements",
                     "type": "array"
@@ -1329,7 +1349,7 @@ export const survey = {
                   "exitRequirements": {
                     "description": "Collection of requirements to leave this step",
                     "items": {
-                      "$ref": "#/definitions/interface-d.ts-6410-7187-d.ts-0-60004408250476"
+                      "$ref": "#/definitions/interface-d.ts-6530-7307-d.ts-0-60124408250476"
                     },
                     "title": "Exit Requirements",
                     "type": "array"
@@ -1337,6 +1357,11 @@ export const survey = {
                   "footer": {
                     "description": "Optional footer text to display at the bottom of the step",
                     "title": "Footer",
+                    "type": "string"
+                  },
+                  "helperText": {
+                    "description": "Text to display below the form control",
+                    "title": "Helper Text",
                     "type": "string"
                   },
                   "id": {
@@ -1361,7 +1386,7 @@ export const survey = {
                       "requirements": {
                         "description": "Collection of requirements to enable display of this status",
                         "items": {
-                          "$ref": "#/definitions/interface-d.ts-6410-7187-d.ts-0-60004408250476"
+                          "$ref": "#/definitions/interface-d.ts-6530-7307-d.ts-0-60124408250476"
                         },
                         "title": "Requirements",
                         "type": "array"
@@ -1746,7 +1771,7 @@ export const survey = {
           "type": "string"
         },
         "subTitle": {
-          "title": "SubTitle",
+          "title": "Subtitle",
           "type": "string"
         },
         "title": {
@@ -1927,6 +1952,11 @@ export const survey = {
               "title": "Footer",
               "type": "string"
             },
+            "helperText": {
+              "description": "Text to display below the form control",
+              "title": "Helper Text",
+              "type": "string"
+            },
             "id": {},
             "info": {
               "description": "Contextual content to display below the step contents and above the footer",
@@ -2021,7 +2051,7 @@ export const survey = {
           "type": "array"
         },
         "subTitle": {
-          "title": "SubTitle",
+          "title": "Subtitle",
           "type": "string"
         },
         "title": {
@@ -2112,6 +2142,11 @@ export const survey = {
         "footer": {
           "description": "Optional footer text to display at the bottom of the step",
           "title": "Footer",
+          "type": "string"
+        },
+        "helperText": {
+          "description": "Text to display below the form control",
+          "title": "Helper Text",
           "type": "string"
         },
         "id": {
@@ -2554,7 +2589,7 @@ export const survey = {
                       "entryRequirements": {
                         "description": "Collection of requirements to view/enter this step",
                         "items": {
-                          "$ref": "#/definitions/interface-d.ts-6410-7187-d.ts-0-60004408250476"
+                          "$ref": "#/definitions/interface-d.ts-6530-7307-d.ts-0-60124408250476"
                         },
                         "title": "Requirements",
                         "type": "array"
@@ -2562,7 +2597,7 @@ export const survey = {
                       "exitRequirements": {
                         "description": "Collection of requirements to leave this step",
                         "items": {
-                          "$ref": "#/definitions/interface-d.ts-6410-7187-d.ts-0-60004408250476"
+                          "$ref": "#/definitions/interface-d.ts-6530-7307-d.ts-0-60124408250476"
                         },
                         "title": "Exit Requirements",
                         "type": "array"
@@ -2570,6 +2605,11 @@ export const survey = {
                       "footer": {
                         "description": "Optional footer text to display at the bottom of the step",
                         "title": "Footer",
+                        "type": "string"
+                      },
+                      "helperText": {
+                        "description": "Text to display below the form control",
+                        "title": "Helper Text",
                         "type": "string"
                       },
                       "id": {
@@ -2594,7 +2634,7 @@ export const survey = {
                           "requirements": {
                             "description": "Collection of requirements to enable display of this status",
                             "items": {
-                              "$ref": "#/definitions/interface-d.ts-6410-7187-d.ts-0-60004408250476"
+                              "$ref": "#/definitions/interface-d.ts-6530-7307-d.ts-0-60124408250476"
                             },
                             "title": "Requirements",
                             "type": "array"
@@ -2799,6 +2839,7 @@ export const survey = {
                                 "entryRequirements": {},
                                 "exitRequirements": {},
                                 "footer": {},
+                                "helperText": {},
                                 "id": {},
                                 "info": {},
                                 "internalNotes": {},
@@ -2983,6 +3024,7 @@ export const survey = {
                                 "entryRequirements": {},
                                 "exitRequirements": {},
                                 "footer": {},
+                                "helperText": {},
                                 "id": {},
                                 "info": {},
                                 "internalNotes": {},
@@ -3028,6 +3070,11 @@ export const survey = {
                   "title": "Footer",
                   "type": "string"
                 },
+                "helperText": {
+                  "description": "Text to display below the form control",
+                  "title": "Helper Text",
+                  "type": "string"
+                },
                 "id": {
                   "description": "Unique identifier",
                   "title": "Id",
@@ -3050,7 +3097,7 @@ export const survey = {
                     "requirements": {
                       "description": "Collection of requirements to enable display of this status",
                       "items": {
-                        "$ref": "#/definitions/interface-d.ts-6410-7187-d.ts-0-60004408250476"
+                        "$ref": "#/definitions/interface-d.ts-6530-7307-d.ts-0-60124408250476"
                       },
                       "title": "Requirements",
                       "type": "array"
@@ -3148,7 +3195,7 @@ export const survey = {
       ],
       "type": "object"
     },
-    "interface-d.ts-6410-7187-d.ts-0-60004408250476": {
+    "interface-d.ts-6530-7307-d.ts-0-60124408250476": {
       "description": "Defines an individual requirement for accessing a step",
       "properties": {
         "explanation": {
@@ -3290,6 +3337,7 @@ export const survey = {
                   "entryRequirements": {},
                   "exitRequirements": {},
                   "footer": {},
+                  "helperText": {},
                   "id": {},
                   "info": {},
                   "internalNotes": {},

@@ -35,6 +35,7 @@ export const StepLayout = (props: IStepData): JSX.Element => {
             <CardBody className={getCssClass('card-body')}>
               {Wizard.getSubtitle(props)}
               {props.children}
+              {Wizard.getHelperText(props)}
               {Wizard.getInfoBox(props)}
             </CardBody>
             <CardFooter className={getCssClass('card-footer')}>

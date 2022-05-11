@@ -15,6 +15,10 @@ export interface IRef extends IRefCore {
    */
   order?: number;
   /**
+   * @title Subtitle
+   */
+  subTitle?: string;
+  /**
    * @title Title
    */
   title?: string;

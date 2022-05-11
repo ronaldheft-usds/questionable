@@ -59,6 +59,19 @@ export abstract class Wizard {
     );
   }
 
+  public static getHelperText(props: IStepData): JSX.Element {
+    const text = props.step?.helperText;
+    if (!text) {
+      return noel();
+    }
+    return (
+      <Span
+        className={Wizard.getCssClass(CSS_CLASS.STEP, 'helperText', props)}
+        node={text}
+      />
+    );
+  }
+
   public static getInfoBox(props: IStepData): JSX.Element {
     const text = props.step?.info;
     if (!text) {

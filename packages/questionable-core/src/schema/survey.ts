@@ -321,6 +321,11 @@ export const survey = {
           "title": "Footer",
           "type": "string"
         },
+        "helperText": {
+          "description": "Text to display below the form control",
+          "title": "Helper Text",
+          "type": "string"
+        },
         "id": {
           "description": "Unique identifier",
           "title": "Id",
@@ -503,6 +508,11 @@ export const survey = {
         "footer": {
           "description": "Optional footer text to display at the bottom of the step",
           "title": "Footer",
+          "type": "string"
+        },
+        "helperText": {
+          "description": "Text to display below the form control",
+          "title": "Helper Text",
           "type": "string"
         },
         "id": {
@@ -829,6 +839,7 @@ export const survey = {
             "entryRequirements": {},
             "exitRequirements": {},
             "footer": {},
+            "helperText": {},
             "id": {},
             "info": {},
             "internalNotes": {},
@@ -962,6 +973,11 @@ export const survey = {
         "footer": {
           "description": "Optional footer text to display at the bottom of the step",
           "title": "Footer",
+          "type": "string"
+        },
+        "helperText": {
+          "description": "Text to display below the form control",
+          "title": "Helper Text",
           "type": "string"
         },
         "id": {

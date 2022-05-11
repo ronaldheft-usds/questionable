@@ -71,6 +71,12 @@ export interface IStep extends IStepCore {
    */
   footer?: string;
   /**
+   * Text to display below the form control
+   *
+   * @title Helper Text
+   */
+  helperText?: string;
+  /**
    * Contextual content to display below the step contents and above the footer
    *
    * @title Info
