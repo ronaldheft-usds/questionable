@@ -97,6 +97,12 @@ div.usa-step-indicator__header {
   margin: 20px 0;
 }
 
+.usds-q-step-helperText {
+  display: inline-block;
+  padding-top: 5px;
+  padding-left: 2px;
+}
+
 .usds-q-step-info {
   background-color: #d5fbf3 !important;
   border-color: #1dc2ae !important;

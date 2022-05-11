@@ -33,7 +33,7 @@ const HOME_B: Partial<IQuestion> = {
     { id: '1', title: 'Rent' },
   ],
   id:       'HOME_B',
-  subTitle: 'You may be living somewhere else right now. "Home" refers to the place that was affected by the sudden event.',
+  subTitle: '"Home" refers to the place that was affected by the sudden event. You may be living somewhere else right now.',
   title:    'Do you own or rent your home?',
 };
 
@@ -43,18 +43,18 @@ const HOME_B: Partial<IQuestion> = {
 const HOME_C: Partial<IQuestion> = {
   answers:  [YES, NO],
   id:       'HOME_C',
-  subTitle: 'This means it was the address for things like taxes, voter registration, and school district if you have children.',
-  title:    'Was the space your primary home when the event happened?',
+  subTitle: 'This means it\'s the address for things like your taxes, voter registration, and school district if you have children.',
+  title:    'Is it your primary home?',
 };
 
 /**
  * Home: zip code
  */
 const HOME_D: Partial<IQuestion> = {
-  answers: [YES, NO],
-  id:      'HOME_D',
-  info:    'Five-digit ZIP Code',
-  title:   'What\'s the ZIP Code for your home?',
+  answers:    [YES, NO],
+  helperText: 'Five-digit ZIP Code',
+  id:         'HOME_D',
+  title:      'What\'s the ZIP Code for your home?',
 };
 
 /**
@@ -74,28 +74,31 @@ const HOME_E: Partial<IQuestion> = {
  * Home: loan usage - own
  */
 const HOME_FA: Partial<IQuestion> = {
-  answers: [YES, NO],
-  id:      'HOME_FA',
-  title:   'A loan for the sudden event you selected must be used to repair your home and other items like furniture, clothing, cars, and appliances. Did the event cause physical damage to your home?',
+  answers:  [YES, NO],
+  id:       'HOME_FA',
+  subTitle: 'Our loans must be used to repair your home and other physical items like cars, furniture, clothing, and appliances.',
+  title:    'Did the event damage your home?',
 };
 
 /**
  * Home: loan usage - rent
  */
 const HOME_FB: Partial<IQuestion> = {
-  answers: [YES, NO],
-  id:      'HOME_FB',
-  title:   'A loan for the sudden event you selected must be used to replace furniture, clothing, cars, and other items that were damaged. Did the event cause physical damage to your personal stuff?',
+  answers:  [YES, NO],
+  id:       'HOME_FB',
+  subTitle: 'Our loans must be used to replace physical items like cars, furniture, clothing, and other things that were damaged.',
+  title:    'Did the event damage your personal stuff?',
 };
 
 /**
  * Home: age
  */
 const HOME_GA: Partial<IQuestion> = {
-  answers:  [YES, NO],
-  id:       'HOME_GA',
-  subTitle: 'The legal age to borrow money varies based on where you live.',
-  title:    'How old are you?',
+  answers:    [YES, NO],
+  helperText: 'Age',
+  id:         'HOME_GA',
+  subTitle:   'The legal age to borrow money varies based on where you live.',
+  title:      'How old are you?',
 };
 const HOME_GB: Partial<IQuestion> = { ...HOME_GA, id: 'HOME_GB' };
 
@@ -103,10 +106,10 @@ const HOME_GB: Partial<IQuestion> = { ...HOME_GA, id: 'HOME_GB' };
  * Home: people living at home
  */
 const HOME_HA: Partial<IQuestion> = {
-  answers: [YES, NO],
-  id:      'HOME_HA',
-  info:    'Number of kids and adults in your home',
-  title:   'How many people lived in your home when the sudden event happened?',
+  answers:    [YES, NO],
+  helperText: 'Total number of kids and adults in your home when the event happened',
+  id:         'HOME_HA',
+  title:      'How many people were living in your home when the event happened?',
 };
 const HOME_HB: Partial<IQuestion> = { ...HOME_HA, id: 'HOME_HB' };
 
@@ -114,11 +117,11 @@ const HOME_HB: Partial<IQuestion> = { ...HOME_HA, id: 'HOME_HB' };
  * Home: people depending on income
  */
 const HOME_IA: Partial<IQuestion> = {
-  answers:  [YES, NO],
-  id:       'HOME_IA',
-  info:     'Number of kids and adults who depend on the same income',
-  subTitle: 'You may have roommates, friends, extended family, or others who share your space but don\'t live off of the same income as you.',
-  title:    'How many of those people depend on the same income?',
+  answers:    [YES, NO],
+  helperText: 'Total number of kids and adults who depend on the same income in your home',
+  id:         'HOME_IA',
+  subTitle:   'You may have roommates, friends, extended family, or others who share your space but don\'t live off of the same income as you.',
+  title:      'How many of them depend on the same income?',
 };
 const HOME_IB: Partial<IQuestion> = { ...HOME_IA, id: 'HOME_IB' };
 
@@ -126,11 +129,11 @@ const HOME_IB: Partial<IQuestion> = { ...HOME_IA, id: 'HOME_IB' };
  * Home: income
  */
 const HOME_JA: Partial<IQuestion> = {
-  answers:  [YES, NO],
-  id:       'HOME_JA',
-  info:     'Estimate for total combined monthly income',
-  subTitle: 'Estimate the total amount for everyone who depends on the same income in your home. Include money from jobs and government assistance (Social Security benefits, unemployment insurance, etc.).',
-  title:    'How much money do you make every month?',
+  answers:    [YES, NO],
+  helperText: 'Estimate for monthly income',
+  id:         'HOME_JA',
+  subTitle:   'Estimate the total amount for everyone who depends on the same income in your home. Include money from jobs and government assistance (Social Security benefits, unemployment insurance, etc.).',
+  title:      'How much money do you make every month?',
 };
 const HOME_JB: Partial<IQuestion> = { ...HOME_JA, id: 'HOME_JB' };
 
@@ -138,11 +141,11 @@ const HOME_JB: Partial<IQuestion> = { ...HOME_JA, id: 'HOME_JB' };
  * Home: debt
  */
 const HOME_KA: Partial<IQuestion> = {
-  answers:  [YES, NO],
-  id:       'HOME_KA',
-  info:     'Estimate for total combined debt',
-  subTitle: 'Estimate the total amount for everyone who depends on the same income in your home. Debt includes things like car or student loans, credit card payments, and mortgages.',
-  title:    'How much debt do you pay back every month?',
+  answers:    [YES, NO],
+  helperText: 'Estimate for monthly debt',
+  id:         'HOME_KA',
+  subTitle:   'Debt includes things like car or student loans, credit card payments, and mortgages. Estimate the total amount for everyone who depends on the same income in your home.',
+  title:      'How much debt do you pay every month?',
 };
 const HOME_KB: Partial<IQuestion> = { ...HOME_KA, id: 'HOME_KB' };
 
