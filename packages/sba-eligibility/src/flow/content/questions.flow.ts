@@ -43,7 +43,7 @@ const HOME_B: Partial<IQuestion> = {
 const HOME_C: Partial<IQuestion> = {
   answers:  [YES, NO],
   id:       'HOME_C',
-  subTitle: 'This means it\'s the address for things like your taxes, voter registration, and school district if you have children.',
+  subTitle: 'This means you live there for most of the year and it\'s the address on your taxes and voter registration.',
   title:    'Is it your primary home?',
 };
 

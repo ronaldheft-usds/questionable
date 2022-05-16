@@ -4,7 +4,7 @@ import { PAGE_TYPE } from '@usds.gov/questionable-react-component';
 export const pageContent = {
   noResultsPage: {
     body: `
-    If you believe you do meet the requirements and want to start an application anyway, <a>learn how to apply</a>.
+    <a>Learn how to apply</a>, if you want to start an application anyway.
 `,
     id:       PAGE_TYPE.NO_RESULTS,
     subTitle: `
